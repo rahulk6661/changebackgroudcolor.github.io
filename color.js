@@ -1,4 +1,6 @@
-const button=document.querySelector("button");
+const button1=document.querySelector(".id1");
+const button2=document.querySelector(".id2");
+const button3=document.querySelector(".id3");
 const h1=document.querySelector("h1");
 const body=document.querySelector("body");
 function randomcolorgenerator()
@@ -16,3 +18,25 @@ console.log(e.currentTarget.textContent);
     body.style.backgroundColor=p;
     h1.textContent=p;
 });
+button1.addEventListener('click',(e)=>
+{
+console.log(e.currentTarget.textContent);
+    p=randomcolorgenerator()
+    body.style.backgroundColor=p;
+    h1.textContent=p;
+});
+var changeid;
+button2.addEventListener('click',()=>
+{
+     changeid=setInterval(() => {
+        p=randomcolorgenerator()
+        body.style.backgroundColor=p;
+        h1.textContent=p;  
+    }, 500);
+});
+button3.addEventListener('click',()=>
+{
+    clearInterval(changeid);
+    const p=body.style.backgroundColor;
+    h1.textContent=p;
+})
