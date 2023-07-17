@@ -11,13 +11,7 @@ function randomcolorgenerator()
     const randomval=`rgb(${c1},${c2},${c3})`;
     return randomval;
 }
-button.addEventListener('click',(e)=>
-{
-console.log(e.currentTarget.textContent);
-    p=randomcolorgenerator()
-    body.style.backgroundColor=p;
-    h1.textContent=p;
-});
+
 button1.addEventListener('click',(e)=>
 {
 console.log(e.currentTarget.textContent);
